@@ -1,0 +1,40 @@
+package sample;
+
+import java.util.Scanner;
+
+public class TransposeOfMatrix {
+
+	public static void main(String[] args) 
+	{
+		int r,c;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number of rows:");
+		r=sc.nextInt();
+		System.out.println("Enter the number of columns:");
+		c=sc.nextInt();
+		int[][]matrix=new int[r][c];
+		
+		System.out.println("Enter the elements:");
+		
+		for(int i=0;i<r; i++)
+			for(int j=0; j<c; j++)
+				matrix[i][j] = sc.nextInt();
+				
+		int transpose[][]=new int[c][r];
+		for (int i=0;i<r; i++)
+			for(int j=0; j<c; j++)
+				transpose[j][i]=matrix[i][j];
+		
+		System.out.println("Transpose Matrix=");
+				for(int i=0; i<r; i++)
+				{
+					for(int j=0; j<c; j++)
+					{
+						System.out.print(matrix[j][i]+"\t");
+					}
+					System.out.print("\n");
+					sc.close();
+				}
+	}
+
+}
